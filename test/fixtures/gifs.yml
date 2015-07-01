@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: gifs
+#
+#  id         :integer          not null, primary key
+#  frames     :integer
+#  gif_blob   :binary
+#  user_id    :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  frames: 1
+  gif_blob: 
+  user_id: 
+
+two:
+  frames: 1
+  gif_blob: 
+  user_id: 
