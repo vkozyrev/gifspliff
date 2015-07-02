@@ -9,4 +9,6 @@
 #
 
 class Tag < ActiveRecord::Base
+  has_many :gif_relations, :foreign_key => "tag_id", :class_name => "GifTag"
+  has_many :gifs, :through => :gif_relations
 end
