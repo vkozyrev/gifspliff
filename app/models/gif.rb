@@ -15,8 +15,8 @@
 
 class Gif < ActiveRecord::Base
   belongs_to :user
-  has_one :parent_relation, :foreign_key => "child_gif_id", :class_name => "GifPart"
+  has_many :parent_relations, :foreign_key => "child_gif_id", :class_name => "GifPart"
   has_many :child_relations, :foreign_key => "parent_gif_id", :class_name => "GifPart"
-  has_one :parent, :through => :parent_relation
+  has_many :parents, :through => :parent_relations
   has_many :children, :through => :child_relations
 end

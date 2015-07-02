@@ -11,6 +11,6 @@
 #
 
 class GifPart < ActiveRecord::Base
-  belongs_to :parent, :class_name => "Gif", :inverse_of => :parent_relation
-  belongs_to :child, :class_name => "Gif", :inverse_of => :child_relations
+  belongs_to :parent, :foreign_key => "parent_gif_id", :class_name => "Gif", :inverse_of => :parent_relations
+  belongs_to :child, :foreign_key => "child_gif_id", :class_name => "Gif", :inverse_of => :child_relations
 end
